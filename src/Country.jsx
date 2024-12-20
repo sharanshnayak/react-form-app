@@ -59,6 +59,7 @@ function Country({ Data, setFormData }) {
         Country
       </label>
       <select
+        required
         name="country"
         value={selectedCountry}
         onChange={handleChangeCountry}
@@ -78,6 +79,7 @@ function Country({ Data, setFormData }) {
         State / Province
       </label>
       <select
+        required
         name="state"
         value={selectedState}
         onChange={handleChangeState}
@@ -97,6 +99,7 @@ function Country({ Data, setFormData }) {
         City
       </label>
       <select
+        required
         name="city"
         value={selectedCity}
         onChange={handleChangeCity}

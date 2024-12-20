@@ -18,7 +18,7 @@
         "nationality": "Indian",
         "timezones": [
             {
-                "zoneName": "Asia\/Kolkata",
+                "zoneName": "Asia Kolkata",
                 "gmtOffset": 19800,
                 "gmtOffsetName": "UTC+05:30",
                 "abbreviation": "IST",

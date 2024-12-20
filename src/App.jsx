@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 import Data from "./Data.js";
 import Country from "./Country.jsx";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -28,9 +30,11 @@ function App() {
     }
     );
   }
+
   function submitForm(e){
-    e.preventDefault();
+    // e.preventDefault();
     console.log(formData);
+    toast.success("Form is successfully Submitted",{ position:"top-center",});
   }
 
   return (
@@ -43,7 +47,7 @@ function App() {
           First name
         </label>
         <input
-          onChange={collectData}
+         onChange={collectData}
           name="firstName"
           placeholder="Sharansh"
           required
@@ -60,6 +64,7 @@ function App() {
           onChange={collectData}
           name="lastName"
           placeholder="Nayak"
+          required
           className="my-1 w-[100%] rounded-md p-2 text-gray-900 shadow-sm ring-1 placeholder:text-gray-400"
         ></input>
 
@@ -72,6 +77,7 @@ function App() {
         <input
           onChange={collectData}
           name="email"
+          required
           placeholder="nayaksharansh@gmail.com"
           className="my-1 w-[100%] rounded-md p-2 text-gray-900 shadow-sm ring-1 placeholder:text-gray-400"
         ></input>
@@ -86,6 +92,7 @@ function App() {
         </label>
 
         <input
+        required
           onChange={collectData}
           name="address"
           placeholder="185, Virau"
@@ -99,6 +106,7 @@ function App() {
           Zip / Postal code
         </label>
         <input
+        required
           onChange={collectData}
           name="zip"
           placeholder="472331"
@@ -183,6 +191,7 @@ function App() {
           <div className="mt-4 space-y-2">
             <div className="flex items-center">
               <input
+              required
                 onChange={collectData}
                 id="pushEverything"
                 name="pushNotifications"
@@ -199,6 +208,7 @@ function App() {
             </div>
             <div className="flex items-center">
               <input
+              required
                 onChange={collectData}
                 id="pushEmail"
                 name="pushNotifications"
@@ -215,6 +225,7 @@ function App() {
             </div>
             <div className="flex items-center">
               <input
+              required
                 onChange={collectData}
                 id="pushNothing"
                 name="pushNotifications"
@@ -241,6 +252,7 @@ function App() {
           </button>
         </div>
       </form>
+      <ToastContainer/>
     </div>
   );
 }
