@@ -31,10 +31,44 @@ function App() {
     );
   }
 
+  function validForm(){
+    if (!formData.firstName.trim()) {
+      return false;
+    }
+    if (!formData.lastName.trim()) {
+      return false;
+    }
+    if (!formData.country.trim()) {
+      return false;
+    }
+    if (!formData.state.trim()) {
+      return false;
+    }
+    if (!formData.city.trim()) {
+      return false;
+    }
+    if (!formData.zip.trim()) {
+      return false;
+    }
+    if (!formData.address.trim()) {
+      return false;
+    }
+    if (!formData.pushNotifications.trim()) {
+      return false;
+    }
+    if (!formData.email.trim()) {
+      return false;
+    }
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      return false;
+    }
+    return true;
+  }
+
   function submitForm(e){
     // e.preventDefault();
     console.log(formData);
-    toast.success("Form is successfully Submitted",{ position:"top-center",});
+    if(validForm()===true)toast.success("Form is successfully Submitted",{ position:"top-center",});
   }
 
   return (
