@@ -27,7 +27,7 @@ function App() {
     const{name,value,checked,type}=e.target;
     setFormData(prevForm=>{
       return {...prevForm, [name]:type==="checkbox"?checked:value}
-    }
+      }
     );
   }
 
@@ -68,7 +68,7 @@ function App() {
   function submitForm(e){
     // e.preventDefault();
     console.log(formData);
-    if(validForm()===true)toast.success("Form is successfully Submitted",{ position:"top-center",});
+    if(validForm()===true)toast.success("Form is successfully Submitted",{ position:"bottom-center",});
   }
 
   return (
