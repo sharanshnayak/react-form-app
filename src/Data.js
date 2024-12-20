@@ -1,4 +1,4 @@
- const Data=[{
+const Data=[{
         "id": 101,
         "name": "India",
         "iso3": "IND",
